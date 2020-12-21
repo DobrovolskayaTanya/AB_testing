@@ -1,0 +1,63 @@
+{
+	"ABProducts": [{
+		"ProductID": 80181731,
+		"ProductName": "The Classic Check Cashmere Scarf",
+		"ProductCategory": "cat7270024",  
+		"Amount": 99.0,
+		"Quantity": 1,
+		"Color": "Green",
+		"Size": "S",
+		"Monogram": "BB",
+		"Language": "IT",
+		"Image": "https://assets.burberry.com/is/image/Burberryltd/0077f8501e621634f06c63c8b9aaf1f8c4f630f1.jpg?$BBY_V2_B_4X3$",
+		"Navigation": "https://si.qa8.burberry.com/abandoned-cart/YN5a6QGy4HMiymdNmy66Pg=="
+	}, {
+		"ProductID": 40785761,
+		"ProductName": "The Medium Leather Belt Bag",
+		"ProductCategory": "cat6720026" , 
+		"Amount": 79.0,
+		"Quantity": 2,
+		"Color": "Black/optic white",
+		"Size": "XL",
+		"Monogram": "AHG",
+		"Language": "DE",
+		"Image": "https://assets.burberry.com/is/image/Burberryltd/51f1925dbe0caa5e1d9d96692dd1bdb503768dc7.jpg?$BBY_V2_B_4X3$",
+		"Navigation": "https://uk.qa8.burberry.com/abandoned-cart/Helm6JONkTYiymdNmy66Pg=="
+	}, {
+		"ProductID": 80236081,
+		"ProductName": "‘C’ Alphabet Charm Gold-plated Necklace",
+		"ProductCategory": "cat4730032",
+		"Amount": 49.0,
+		"Quantity": 1,
+		"Color": "Green",
+		"Size": "10 ",
+		"Monogram": "KOI",
+		"Language": "RU",
+		"Image": "https://assets.burberry.com/is/image/Burberryltd/dfe1be312b7c14783459f6ea5d6fcec50845125b.jpg?$BBY_V2_ML_4X3$",
+		"Navigation": "https://us.qa8.burberry.com/abandoned-cart/JQDBrqG-o1WgTjki_Fndeg=="
+	}, {
+		"ProductID": 80149211,
+		"ProductName": "Logo Print Stretch Nylon Trackpants",
+		"ProductCategory": "cat7460090" , 
+		"Amount": 170.0,
+		"Quantity": 5,
+		"Color": "Black",
+		"Size": "50",
+		"Monogram": "YY",
+		"Language": "DE",
+		"Image": "https://assets.burberry.com/is/image/Burberryltd/dfe1be312b7c14783459f6ea5d6fcec50845125b.jpg?$BBY_V2_ML_4X3$",
+		"Navigation": "https://us.burberry.com/abandoned-cart/jNm7M3M5CG3vBuYfF1l0Yg=="
+	}, {
+		"ProductID": 39696801,
+		"ProductName": "Burberry Kisses – Russet No.93",
+		"ProductCategory": "cat2330046",
+		"Amount": 25.0,
+		"Quantity": 2,
+		"Color": "red",
+		"Size": "10 ",
+		"Monogram": "AN",
+		"Language": "KO",
+		"Image": "https://assets.burberry.com/is/image/Burberryltd/dfe1be312b7c14783459f6ea5d6fcec50845125b.jpg?$BBY_V2_ML_4X3$",
+		"Navigation": "https://us.burberry.com/abandoned-cart/jNm7M3M5CG3vBuYfF1l0Yg=="
+	}]
+}

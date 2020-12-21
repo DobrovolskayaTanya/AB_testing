@@ -1,0 +1,198 @@
+<mvc:View controllerName="smc.AB_testing.controller.App"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:t="sap.ui.table"
+	xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Shell id="shell">
+			<App id="app">
+			<pages>
+				<Page>
+	<VBox class="sapUiSmallMargin">
+		<f:Form id="ABform" class="sapUiSmallMarginBottom"
+			editable="true">
+			<f:title>
+				<core:Title text="Abandoned basket information" />
+			</f:title>
+			<f:layout>
+				<f:ColumnLayout 
+					columnsM="2"
+					columnsL="3"
+					columnsXL="4"
+				/>
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer title="Abandoned Basket" >
+					<f:formElements>
+						<f:FormElement  label="Email">
+							<f:fields>
+								<Input  id="email" enabled="{/enabled}" valueLiveUpdate="true" width="300px" required="true" liveChange ="onTypeEmail"/>
+						</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Navigation">
+							<f:fields>
+								<Input id="navigation" enabled="{/enabled}"  valueLiveUpdate="true" width="350px" required="true" liveChange ="onTypeNavigation"/>
+						</f:fields>
+						</f:FormElement>
+						</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer title="Order details" >
+					<f:formElements>
+						<f:FormElement label="Currency">
+							<f:fields>
+							<Select id="currency" width="120px">
+								<core:ListItem
+							    text="EUR"
+								key="EUR"/>
+								<core:ListItem
+							    text="GBP"
+								key="GBP"/>
+								<core:ListItem
+							    text="USD"
+								key="USD"/>
+								<core:ListItem
+							    text="CZK"
+								key="CZK"/>
+							</Select>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Price List Locale">
+							<f:fields>
+									<Select id="locale" width="150px">
+											   <core:ListItem
+											    text="en_SI_EUR"
+												key="en_SI_EUR"/>
+												<core:ListItem
+											    text="en_GB_GBP"
+												key="en_GB_GBP"/>
+												<core:ListItem
+											    text="en_US_USD"
+												key="en_US_USD"/>
+												<core:ListItem
+											    text="en_CZ_CZK"
+												key="en_CZ_CZK"/>
+									</Select>
+							</f:fields>
+						</f:FormElement>
+							<f:FormElement label="Interaction source object">
+							<f:fields>
+								<Select id="source" width="140px">
+										<core:ListItem
+										text="o32990236"
+										key="o32990236"/>
+										<core:ListItem
+										text="o32960222"
+										key="o32960222"/>
+										<core:ListItem
+										text="o32950252"
+										key="o32950252"/>
+								</Select>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Domain">
+							<f:fields>
+								<Select id="domain" width="60px">
+									<core:ListItem
+									text="DE"
+									key="DE"/>
+									<core:ListItem
+									text="RU"
+									key="RU"/>
+									<core:ListItem
+									text="IT"
+									key="IT"/>
+								</Select>
+							</f:fields>
+						</f:FormElement>
+							</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+			</f:Form>
+	</VBox>
+	
+<Panel headerText="Product Information" class="sapUiResponsiveMargin" width="auto">
+		<headerToolbar>
+			<OverflowToolbar id="otbSubheader">
+				<Title text="Products" level="H2" />
+				<ToolbarSpacer />
+				<Button icon="sap-icon://add" tooltip="Add a Row" press="onPressAddRow"/>
+				<Button icon="sap-icon://sys-minus"  tooltip="Delete a Row" press="onPressDeleteRow"/>
+			</OverflowToolbar>
+		</headerToolbar>
+		<content>		
+			<Table id="ProdTable"  items = "{/ABProducts}"  mode= "MultiSelect" growing="true" growingScrollToLoad="false" >
+				<columns class="sapUiSmallMargin">
+					<Column width="8rem">
+						<Text text="Product ID"/>
+					</Column>
+					<Column width="17rem">
+						<Text text="Product Name"/>
+					</Column>
+					<Column width="12rem">
+						<Text text="Product Cathegory"/>
+					</Column>
+					<Column width="5rem">
+						<Text text="Amount"/>
+					</Column>
+					<Column width="6rem">
+						<Text text="Quantity"/>
+					</Column>
+						<Column width="8rem">
+						<Text text="Color"/>
+					</Column>
+					<Column width="4rem">
+						<Text text="Size"/>
+					</Column>
+					<Column width="6rem">
+						<Text text="Monogram Text"/>
+					</Column>
+					<Column width="6rem">
+						<Text text="Language"/>
+					</Column>
+     			</columns>	
+				<items>
+					<ColumnListItem type ="Active">
+						<cells>
+							<Input value="{ProductID}"/>
+							<Input  value="{ProductName}"/>
+							<Input  value="{ProductCategory}"/>
+							<Input  value="{Amount}"/>
+							<Input value="{Quantity}"/>
+							<Input value="{Color}"/>
+							<Input value="{Size}"/>
+							<Input value="{Monogram}"/>
+							<Input value="{Language}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+</content>
+
+</Panel>
+					<footer>
+						<Toolbar>
+							<ToolbarSpacer/>
+							<Button
+							id="postAB"
+							press=".onPostAB"
+							class="sapUiTinyMarginBeginEnd"
+							type="Emphasized"
+							icon="sap-icon://cart-3"
+							text="Post Abandoned Basket">
+					<customData>
+						<BadgeCustomData
+							key="badge"
+							value=""
+							visible=""/>
+					</customData>
+				</Button>
+						</Toolbar>
+					</footer>
+					</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
